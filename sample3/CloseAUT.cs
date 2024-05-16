@@ -30,9 +30,9 @@ namespace sample3
     public partial class CloseAUT : ITestModule
     {
         /// <summary>
-        /// Holds an instance of the global::MyTestProject.New_Repository repository.
+        /// Holds an instance of the sample3Repository repository.
         /// </summary>
-        public static global::MyTestProject.New_Repository repo = global::MyTestProject.New_Repository.Instance;
+        public static sample3Repository repo = sample3Repository.Instance;
 
         static CloseAUT instance = new CloseAUT();
 

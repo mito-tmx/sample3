@@ -1,34 +1,68 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <recordtable
+embeddedrepository="False"
 id="2b9c7fe5-9952-4e8a-97b7-0fdf78768800"
 mode="Desktop">
-  <codegen classname="CloseAUT" namespace="sample3"/>
-  <name>
-      CloseAUT
-  </name>
-  <variables>
-      <var
-          id="b87ef359-a684-4de5-a4d9-58b7bfb9e5d8"
-          name="CloseAutProcessIDVar">
-              -1
-      </var>
-  </variables>
-  <recorditems>
-      <closeapprecorditem
-        enabled="True"
-        graceperiod="500ms"
-        method="CloseWindowByProcessID"
-        optional="False">
-          <comment>
-          </comment>
-          <bindings>
-              <binding
-              target="ProcessID"
-              variable="CloseAutProcessIDVar">
-              </binding>
-          </bindings>
-      </closeapprecorditem>
-  </recorditems>
-  <repository name="sample3Repository" relativepath="sample3Repository.rxrep">
-  </repository>
+	<repeatcount>
+		1
+	</repeatcount>
+	<turbomode>
+		False
+	</turbomode>
+	<genreport>
+		True
+	</genreport>
+	<speedfactor>
+		1
+	</speedfactor>
+	<useDefaultItemLogging>
+		True
+	</useDefaultItemLogging>
+	<codegen
+	classname="CloseAUT"
+	namespace="sample3">
+	</codegen>
+	<variables>
+		<var
+		id="b87ef359-a684-4de5-a4d9-58b7bfb9e5d8"
+		name="CloseAutProcessIDVar">
+			-1
+		</var>
+	</variables>
+	<recorditems>
+		<closeapprecorditem
+		enabled="True"
+		graceperiod="500ms"
+		method="CloseWindowByProcessID"
+		optional="False"
+		searchpropertyid="6837dc0d-f4a8-444e-8f90-35b93a6c73d3">
+			<comment>
+			</comment>
+			<bindings>
+				<binding
+				target="ProcessID"
+				variable="CloseAutProcessIDVar">
+				</binding>
+			</bindings>
+		</closeapprecorditem>
+	</recorditems>
+	<repository
+	id="d003ad5e-63a9-4d19-ad46-b5a389bc191e"
+	name="sample3Repository"
+	relativepath="sample3Repository.rxrep">
+		<codegen
+		classname="sample3Repository"
+		namespace="sample3">
+		</codegen>
+		<rootfolder
+		id="a057ad94-fb66-4602-89da-766c447faf3e"
+		name="_rootdummy_">
+		</rootfolder>
+	</repository>
+	<usercodefile
+	lang="CSharp">
+		CloseAUT.UserCode.cs
+	</usercodefile>
+	<references>
+	</references>
 </recordtable>

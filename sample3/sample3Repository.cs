@@ -27,6 +27,7 @@ namespace sample3
     public partial class sample3Repository : RepoGenBaseFolder
     {
         static sample3Repository instance = new sample3Repository();
+        sample3RepositoryFolders.RxMainFrameAppFolder _rxmainframe;
 
         /// <summary>
         /// Gets the singleton class instance representing the sample3Repository element repository.
@@ -43,6 +44,7 @@ namespace sample3
         public sample3Repository() 
             : base("sample3Repository", "/", null, 0, false, "a057ad94-fb66-4602-89da-766c447faf3e", ".\\RepositoryImages\\sample3Repositorya057ad94.rximgres")
         {
+            _rxmainframe = new sample3RepositoryFolders.RxMainFrameAppFolder(this);
         }
 
 #region Variables
@@ -60,6 +62,15 @@ namespace sample3
                 return _selfInfo;
             }
         }
+
+        /// <summary>
+        /// The RxMainFrame folder.
+        /// </summary>
+        [RepositoryFolder("5de8a728-a145-4cb3-8a02-ab928d5b7158")]
+        public virtual sample3RepositoryFolders.RxMainFrameAppFolder RxMainFrame
+        {
+            get { return _rxmainframe; }
+        }
     }
 
     /// <summary>
@@ -68,6 +79,124 @@ namespace sample3
     [System.CodeDom.Compiler.GeneratedCode("Ranorex", global::Ranorex.Core.Constants.CodeGenVersion)]
     public partial class sample3RepositoryFolders
     {
+        /// <summary>
+        /// The RxMainFrameAppFolder folder.
+        /// </summary>
+        [RepositoryFolder("5de8a728-a145-4cb3-8a02-ab928d5b7158")]
+        public partial class RxMainFrameAppFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _enteryournameInfo;
+            RepoItemInfo _btnsubmitusernameInfo;
+            RepoItemInfo _resetInfo;
+
+            /// <summary>
+            /// Creates a new RxMainFrame  folder.
+            /// </summary>
+            public RxMainFrameAppFolder(RepoGenBaseFolder parentFolder) :
+                    base("RxMainFrame", "/form[@controlname='RxMainFrame']", parentFolder, 30000, null, true, "5de8a728-a145-4cb3-8a02-ab928d5b7158", "")
+            {
+                _enteryournameInfo = new RepoItemInfo(this, "EnterYourName", ".//text[@accessiblename='Enter your name' and @accessiblerole='Text']", ".//text[@accessiblename='Enter your name' and @accessiblerole='Text']", 30000, null, "62d5085f-e8db-43ef-ab1a-ee343a07f811");
+                _btnsubmitusernameInfo = new RepoItemInfo(this, "BtnSubmitUserName", ".//button[@controlname='btnSubmitUserName']", ".//button[@controlname='btnSubmitUserName']", 30000, null, "4310e1e0-850d-4cf4-9d99-95930674ffc6");
+                _resetInfo = new RepoItemInfo(this, "Reset", ".//link[@accessiblename='Reset']", ".//link[@accessiblename='Reset']", 30000, null, "779d1cdf-9e3f-4af2-b327-85278944ae35");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("5de8a728-a145-4cb3-8a02-ab928d5b7158")]
+            public virtual Ranorex.Form Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.Form>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("5de8a728-a145-4cb3-8a02-ab928d5b7158")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The EnterYourName item.
+            /// </summary>
+            [RepositoryItem("62d5085f-e8db-43ef-ab1a-ee343a07f811")]
+            public virtual Ranorex.Text EnterYourName
+            {
+                get
+                {
+                    return _enteryournameInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The EnterYourName item info.
+            /// </summary>
+            [RepositoryItemInfo("62d5085f-e8db-43ef-ab1a-ee343a07f811")]
+            public virtual RepoItemInfo EnterYourNameInfo
+            {
+                get
+                {
+                    return _enteryournameInfo;
+                }
+            }
+
+            /// <summary>
+            /// The BtnSubmitUserName item.
+            /// </summary>
+            [RepositoryItem("4310e1e0-850d-4cf4-9d99-95930674ffc6")]
+            public virtual Ranorex.Button BtnSubmitUserName
+            {
+                get
+                {
+                    return _btnsubmitusernameInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The BtnSubmitUserName item info.
+            /// </summary>
+            [RepositoryItemInfo("4310e1e0-850d-4cf4-9d99-95930674ffc6")]
+            public virtual RepoItemInfo BtnSubmitUserNameInfo
+            {
+                get
+                {
+                    return _btnsubmitusernameInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Reset item.
+            /// </summary>
+            [RepositoryItem("779d1cdf-9e3f-4af2-b327-85278944ae35")]
+            public virtual Ranorex.Link Reset
+            {
+                get
+                {
+                    return _resetInfo.CreateAdapter<Ranorex.Link>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Reset item info.
+            /// </summary>
+            [RepositoryItemInfo("779d1cdf-9e3f-4af2-b327-85278944ae35")]
+            public virtual RepoItemInfo ResetInfo
+            {
+                get
+                {
+                    return _resetInfo;
+                }
+            }
+        }
+
     }
 #pragma warning restore 0436
 }

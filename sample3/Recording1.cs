@@ -79,6 +79,28 @@ namespace sample3
 
             Init();
 
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'RxMainFrame.EnterYourName' at 54;10.", repo.RxMainFrame.EnterYourNameInfo, new RecordItemIndex(0));
+            repo.RxMainFrame.EnterYourName.Click("54;10");
+            Delay.Milliseconds(0);
+            
+            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'taro' with focus on 'RxMainFrame.EnterYourName'.", repo.RxMainFrame.EnterYourNameInfo, new RecordItemIndex(1));
+            repo.RxMainFrame.EnterYourName.PressKeys("taro");
+            Delay.Milliseconds(0);
+            
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'RxMainFrame.BtnSubmitUserName' at 46;19.", repo.RxMainFrame.BtnSubmitUserNameInfo, new RecordItemIndex(2));
+            repo.RxMainFrame.BtnSubmitUserName.Click("46;19");
+            Delay.Milliseconds(0);
+            
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Down item 'RxMainFrame.Reset' at 12;8.", repo.RxMainFrame.ResetInfo, new RecordItemIndex(3));
+            repo.RxMainFrame.Reset.MoveTo("12;8");
+            repo.RxMainFrame.Reset.MouseDown(System.Windows.Forms.MouseButtons.Left);
+            Delay.Milliseconds(0);
+            
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Up item 'RxMainFrame.Reset' at 12;8.", repo.RxMainFrame.ResetInfo, new RecordItemIndex(4));
+            repo.RxMainFrame.Reset.MoveTo("12;8");
+            repo.RxMainFrame.Reset.MouseUp(System.Windows.Forms.MouseButtons.Left);
+            Delay.Milliseconds(0);
+            
         }
 
 #region Image Feature Data
